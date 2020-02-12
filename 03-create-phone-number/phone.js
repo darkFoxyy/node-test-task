@@ -1,8 +1,9 @@
 
 const phone = (arr) => {
     if (arr.length !== 10) return console.log("Invalid number")
-
-    const phone = arr.filter(x => (x === 0 || x === 1 || x === 2 || x === 3 || x === 4 || x === 5 || x === 6 || x === 7 || x === 8 || x === 9))
+    if (!arr.filter(x=>typeof(x)===number)) return console.log("Not all of them are digits")
+    
+    const phone = arr.filter(x => x>=0 && x<=9)         
 
     if (phone.length !== arr.length) return console.log("Invalid digits")
     
