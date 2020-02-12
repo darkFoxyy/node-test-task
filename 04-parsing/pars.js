@@ -30,7 +30,7 @@ const data = fs.readFile('contacts.csv', (err, data) => { // If it's running fro
         rows.forEach(row => {
             const data = row.split(',')
             const object = contacts.get(data[2])
-            
+
             if (object) {
                 const phone = {}
 
@@ -39,7 +39,7 @@ const data = fs.readFile('contacts.csv', (err, data) => { // If it's running fro
 
                 keys.add(data[2])
 
-                contacts.set(data[2],object)
+                contacts.set(data[2], object)
             }
         });
         const contactsForJson = []
