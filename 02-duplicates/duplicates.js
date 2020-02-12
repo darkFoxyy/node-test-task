@@ -1,4 +1,4 @@
-var input = 'abcdaABCdhswksrtuub'
+var input = 'abcdaABC1dhswksr2tuub'
 
 const dublicates = []
 

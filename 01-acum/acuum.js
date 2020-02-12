@@ -1,5 +1,5 @@
 
-var input = 'rsdjk'
+var input = 'fsjdfjj'
 
 var i = 1;
 const result = []
@@ -12,4 +12,4 @@ arr.forEach(element => {
     i += 1
 });
 
-console.log(result)
+console.log(result.join('-'))
