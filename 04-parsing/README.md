@@ -14,3 +14,4 @@ be `location_id` and it's values will be name and phones that person have
         ]
     }
 ```
+and write this object into `data.json` file same as it's shown in example above
