@@ -1,5 +1,5 @@
 
-var input = 'fsjdfjj'
+var input = 'ZpglnRxqenU'
 
 var i = 1;
 const result = []
