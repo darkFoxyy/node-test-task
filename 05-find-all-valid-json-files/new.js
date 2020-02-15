@@ -26,29 +26,25 @@ const req = async (nextPath) => {
 //console.log(a)   
 for( const element of a){
 
-    console.log(element)
-    
-    
-    if (element.isFile()) {
-        const data = await file(`${nextPath}/${element.name}`)
-            
-        const json = data.toString()
-            if (isValidJson(json)) {
-                arr.push({ path: `${nextPath}/${element.name}` })
-            }      
-           // console.log(arr)
-    }
+    if(element.isFile())
+    pathes.push(`${nextPath}/${element.name}`)
+
     if (element.isDirectory()) {
-        const tarr = arr.concat(req(`${nextPath}/${element.name}`))
-       // console.log(tarr)
-        arr = tarr
+      await req(`${nextPath}/${element.name}`)
       }
     
 }
-return arr
+
 }
 
 ;(async () =>{
 const h = await req(initialPath)
-console.log(h)
+for( const element of pathes){
+    const data = await file(element)
+    const json = data.toString()
+            if (isValidJson(json)) {
+                arr.push({ path: element })
+            }      
+}
+console.log(arr)
 })()
